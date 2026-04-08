@@ -1,8 +1,7 @@
 dash
-plotly
 pandas
 numpy
+plotly
 wordcloud
-Pillow
+pillow
 textblob
-gunicorn
