@@ -1,4 +1,4 @@
-import io, re, base64, datetime
+import io, re, base64, datetime, os
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -9,8 +9,8 @@ from wordcloud import WordCloud
 from PIL import Image
 
 
-CSV_PATH = r"curated_cleaned_filled.csv"
-PORT = 8050
+CSV_PATH = Path(__file__).resolve().parent / "curated_cleaned_filled.csv"
+PORT = int(os.getenv("PORT", 7860))
 df = pd.read_csv(CSV_PATH)
 df = df.copy()
 #data preprocessing
@@ -422,5 +422,5 @@ def render_tab(tab, influencer, field, ptype, topn):
 
 # run server
 if __name__ == "__main__":
-    print(f"Running app on http://127.0.0.1:{PORT}")
-    app.run(debug=True, port=PORT)
+    print(f"Running app on http://0.0.0.0:{PORT}")
+    app.run(debug=False, host="0.0.0.0", port=PORT, use_reloader=False)
