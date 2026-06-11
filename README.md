@@ -7,8 +7,8 @@ A comprehensive analytical dashboard that explores patterns behind influencer en
 This project investigates how influencers drive audience engagement on Instagram using data-driven insights. By combining quantitative signals such as likes and comments with qualitative signals such as sentiment, emotion, timing, and niche/category, the dashboard reveals actionable patterns that can help creators, marketers, and analysts better understand what drives interaction.
 
 The interactive dashboard visualizes engagement trends across multiple dimensions, including:
-- emotion and sentiment
-- post type
+- Emotion and sentiment
+- Post type
 - timing
 - hashtags
 - virality
